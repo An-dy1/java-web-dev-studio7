@@ -1,4 +1,4 @@
-package org.launchcode.studio7;
+package org.launchcode.studio7.complete;
 
 public class CD {
 

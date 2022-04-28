@@ -1,21 +1,31 @@
 package org.launchcode.studio7.complete;
 
+import java.util.ArrayList;
+
 public class CD extends BaseDisc implements OpticalDisc{
+
+  private ArrayList<String> trackList = new ArrayList<>();
 
   public CD(String aName, int maxCapacity, String aType, int someUsedCapacity) {
     super(aName, maxCapacity, aType, someUsedCapacity);
   }
 
   @Override
-  public void spinDisc() {
-    System.out.println("A CD spins at a rate of 200 - 500 rpm.");
+  public int printNumberOfTotalSections() {
+    System.out.println(String.format("This CD has %o tracks on it", trackList.size()));
+    return trackList.size();
   }
 
-//  @Override
-//  public int getCdMaxSpeed() {
-//    System.out.println("Max speed is actually 670");
-//    return 670;
-//  }
+  @Override
+  public void spinDisc() {
+    System.out.println("Weee! This is an interface-declared method implemented by the CD class");
+  }
 
+  public ArrayList<String> getTrackList() {
+    return trackList;
+  }
 
+  public void setTrackList(ArrayList<String> trackList) {
+    this.trackList = trackList;
+  }
 }

@@ -9,7 +9,6 @@ public abstract class BaseDisc {
   private int remainingCapacity;
   private int capacityUsed;
   private String diskType;
-  private ArrayList<String> contents;
 
   public BaseDisc(String aName, int maxCapacity, String aType, int someUsedCapacity){
     name = aName;
@@ -46,6 +45,8 @@ public abstract class BaseDisc {
 
     return "Data written to disc. Remaining space = " + remainingCapacity;
   }
+
+  public abstract int printNumberOfTotalSections();
 
 
 }

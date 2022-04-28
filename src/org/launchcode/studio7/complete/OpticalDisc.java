@@ -12,9 +12,12 @@ public interface OpticalDisc {
 
   // a default method can have a body
   default int spinDiscMaxSpeed(String discType) {
+    System.out.println("I am a static method called from the interface");
     if(discType == "CD") {
+      System.out.println(String.format("CDs can spin up to %o rpm", cdMaxSpeed));
       return cdMaxSpeed;
     } else {
+      System.out.println(String.format("DVDS can spint up to %o rpm", dvdMaxSpeed));
       return dvdMaxSpeed;
     }
   }

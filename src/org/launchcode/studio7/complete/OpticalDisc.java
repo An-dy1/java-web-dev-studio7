@@ -11,6 +11,7 @@ public interface OpticalDisc {
   void spinDisc();
 
   // a default method can have a body
+  // allow you to add functionality after interface has been implemented
   default int spinDiscMaxSpeed(String discType) {
     System.out.println("I am a static method called from the interface");
     if(discType == "CD") {
@@ -23,6 +24,7 @@ public interface OpticalDisc {
   }
 
   // static method can have a body
+  // describe behavior that is associated with the class in which it is defined rather than with any object
   static int getCdMaxSpeed() {
     System.out.println(cdMaxSpeed);
     return cdMaxSpeed;
